@@ -142,18 +142,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                ╭───────────┬───────────┬───────────┬───────────┬───────────╮                    ╭───────────┬───────────┬───────────┬───────────┬───────────╮
                │     A     │     Z     │     E     │     R     │     T     │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │     Y     │     U     │     I     │     O     │     P     │
    ╭───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────╮
-   │    TAB    │     Q     │     S     │     D     │     F     │     G     ├─╯                ╰─┤     H     │     J     │     K     │     L     │     M     │     "     │
+   │    ESC    │     Q     │     S     │     D     │     F     │     G     ├─╯                ╰─┤     H     │     J     │     K     │     L     │     M     │     ^     │
    ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤╭────────╮╭────────╮├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
    │   CTRL    │     W     │     X     │     C     │     V     │     B     ││  MUTE  ││PLY/PSE ││     N     │     ,     │     ;     │     :     │     !     │    DEL    │
    ╰───────────┴───────────┴───────────┼───────────┼───────────┼───────────┼╰────────╯╰────────╯┼───────────┼───────────┼───────────┼───────────┴───────────┴───────────╯
-                                       │    ALT    │    GUI    │    TAB    │  ENTER  ││  SPACE  │   SHIFT   │   MENU    │   RALT    │
+                                       │    GUI    │    TAB    │   ENTER   │   ALT   ││   CTRL  │   SPACE   │   SHIFT   │   MENU    │
                                        ╰───────────┴───────────┴───────────┴─────────╯╰─────────┴───────────┴───────────┴───────────╯ */
 
    [Default] = LAYOUT_polydactyl(
 							FR_A,				FR_Z,				FR_E,				FR_R,				FR_T,											FR_Y,				FR_U,				FR_I,				FR_O,				FR_P,
 		LT(Mouse,KC_ESC),	FR_Q,				FR_S,				FR_D,				FR_F,				FR_G,											FR_H,				FR_J,				FR_K,				FR_L,				FR_M,				LT(Media,FR_CIRC),
 		KC_LCTL,			FR_W,				FR_X,				FR_C,				FR_V,				FR_B,			KC_MUTE,		KC_MPLY,		FR_N,				FR_COMM,			FR_SCLN,			FR_COLN,			XP(Excl,BkSla),		KC_DEL,
-														KC_LGUI,			LT(Unic,KC_TAB),	LT(Fun,KC_ENT),		KC_LALT,						KC_RALT,			LT(NumArr,KC_SPC),	LSFT_T(KC_BSPC),	KC_APP),
+														KC_LGUI,			LT(Unic,KC_TAB),	LT(Fun,KC_ENT),		KC_LALT,						LCTL_T(KC_ESC),		LT(NumArr,KC_SPC),	LSFT_T(KC_BSPC),	KC_APP),
 
 /*
    ┌───────────────────────────────────────────────────────────┐
@@ -186,15 +186,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    ╭───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────╮
    │           │           │     $     │     #     │           │           ├─╯                ╰─┤     `     │     |     │           │     →     │     µ     │           │
    ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤╭────────╮╭────────╮├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-   │           │           │           │     Ç     │           │           ││        ││        ││     @     │     ¿     │     {     │     }     │     ¡     │           │
+   │           │           │           │     Ç     │     _     │     -     ││        ││        ││     @     │     ¿     │     {     │     }     │     ¡     │           │
    ╰───────────┴───────────┴───────────┼───────────┼───────────┼───────────┼╰────────╯╰────────╯┼───────────┼───────────┼───────────┼───────────┴───────────┴───────────╯
                                        │           │           │           │         ││         │           │           │           │
                                        ╰───────────┴───────────┴───────────┴─────────╯╰─────────┴───────────┴───────────┴───────────╯ */
 
 	[Unic] = LAYOUT_polydactyl(
-							XP(AGrL,AGrU),		X(E_GrL),			XP(E_AigL,E_AigU),	X(Registrd),		FR_AMPR,										KC_TRNS,			X(U_Gr),			KC_TRNS,			XP(OE_L,OE_U),		KC_TRNS,
-		KC_TRNS,			KC_TRNS,			X(Dollar),			FR_HASH,			KC_TRNS,			KC_TRNS,										X(BakQut),			X(Pipe),			KC_TRNS,			X(ArrowR),			X(Micro),			KC_TRNS,
-		KC_TRNS,			KC_TRNS,			KC_TRNS,			XP(CCedL,CCedU),	FR_UNDS,			FR_MINS,		KC_TRNS,		KC_TRNS,		X(At),				X(InvQuest),		FR_LCBR,			FR_RCBR,			X(InvExcl),			KC_TRNS,
+							XP(AGrL,AGrU),		X(E_GrL),			XP(E_AigL,E_AigU),	X(Registrd),		FR_AMPR,										X(Pipe),			X(U_Gr),			KC_NO,				XP(OE_L,OE_U),		KC_NO,
+		KC_NO,				KC_NO,				X(Dollar),			FR_HASH,			FR_UNDS,			FR_MINS,										X(BakQut),			KC_NO,				KC_NO,				X(ArrowR),			X(Micro),			KC_NO,
+		KC_TRNS,			KC_NO,				KC_NO,				XP(CCedL,CCedU),	KC_NO,				KC_NO,			KC_TRNS,		KC_TRNS,		X(At),				X(InvQuest),		FR_LCBR,			FR_RCBR,			X(InvExcl),			KC_NO,
 														KC_TRNS,			KC_TRNS,			KC_TRNS,			KC_TRNS,						KC_TRNS,			KC_TRNS,			KC_TRNS,			KC_TRNS),
 
  /*
@@ -208,7 +208,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    ╭───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────╮
    │    F1     │    F2     │    F3     │    F4     │    F5     │    F6     ├─╯                ╰─┤    F7     │    F8     │    F9     │    F10    │    F11    │    F12    │
    ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤╭────────╮╭────────╮├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-   │           │           │           │           │  ALT 4  │           ││        ││        ││           │           │           │           │           │           │
+   │           │           │           │CTL ALT DEL│  ALT F4   │CTL SFT ESC││        ││        ││  QK_BOOT  │  QK_RBT   │           │           │           │           │
    ╰───────────┴───────────┴───────────┼───────────┼───────────┼───────────┼╰────────╯╰────────╯┼───────────┼───────────┼───────────┼───────────┴───────────┴───────────╯
                                        │           │           │           │         ││         │           │           │           │
                                        ╰───────────┴───────────┴───────────┴─────────╯╰─────────┴───────────┴───────────┴───────────╯ */
@@ -216,7 +216,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[Fun] = LAYOUT_polydactyl(
 							KC_NO,				KC_NO,				KC_NO,				KC_NO,				KC_NO,											KC_NO,				KC_NO,				KC_NO,				KC_NO,				KC_NO,
 		KC_F1,				KC_F2,				KC_F3,				KC_F4,				KC_F5,				KC_F6,											KC_F7,				KC_F8,				KC_F9,				KC_F10,				KC_F11,				KC_F12,
-		KC_TRNS,			KC_TRNS,			KC_TRNS,			C(A(KC_DEL)),		A(KC_F4),			C(S(KC_ESC)),	KC_TRNS,		KC_TRNS,		KC_NO,				KC_NO,				KC_NO,				KC_NO,				KC_NO,				KC_NO,
+		KC_TRNS,			KC_NO,				KC_NO,				C(A(KC_DEL)),		A(KC_F4),			C(S(KC_ESC)),	KC_TRNS,		KC_TRNS,		QK_BOOT,			QK_RBT,				KC_NO,				KC_NO,				KC_NO,				KC_NO,
 														KC_TRNS,			KC_TRNS,			KC_TRNS, 			KC_TRNS,						KC_TRNS,			KC_TRNS,			KC_TRNS,			KC_TRNS),
 
  /*
@@ -226,20 +226,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    │ Media                                                     │
    └───────────────────────────────────────────────────────────┘
                ╭───────────┬───────────┬───────────┬───────────┬───────────╮                    ╭───────────┬───────────┬───────────┬───────────┬───────────╮
-               │     A     │     Z     │     E     │     R     │     T     │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │     Y     │     U     │     I     │     O     │     P     │
+               │           │           │           │           │           │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │           │    ⏹︎	    │    ⏶︎	    │    ⏯︎	    │           │
    ╭───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────╮
-   │    TAB    │     Q     │     S     │     D     │     F     │     G     ├─╯                ╰─┤           │     J     │     K     │     L     │     M     │     "     │
+   │           │           │           │           │           │           ├─╯                ╰─┤    ⏪︎	    │    ⏮︎	    │    ⏷︎	    │    ⏭︎	    │    ⏩︎	    │           │
    ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤╭────────╮╭────────╮├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-   │    DEL    │     W     │     X     │     C     │     V     │     B     ││  MUTE  ││PLY/PSE ││     N     │     ,     │     ;     │     :     │      ^^   │   SHIFT   │
+   │           │           │           │           │           │           ││        ││        ││           │           │           │           │           │           │
    ╰───────────┴───────────┴───────────┼───────────┼───────────┼───────────┼╰────────╯╰────────╯┼───────────┼───────────┼───────────┼───────────┴───────────┴───────────╯
-                                       │    ALT    │    GUI    │    TAB    │  ENTER  ││  SPACE  │   SHIFT   │   MENU    │   RALT    │
+                                       │           │           │           │         ││         │           │           │           │
                                        ╰───────────┴───────────┴───────────┴─────────╯╰─────────┴───────────┴───────────┴───────────╯ */
 
 	[Media] = LAYOUT_polydactyl(
 							KC_NO,				KC_NO,				KC_NO,				KC_NO,				KC_NO,											KC_NO,				KC_MSTP,			KC_VOLU,			KC_MPLY,			KC_NO,
-		TO(Gaming),			KC_NO,				KC_NO,				KC_NO,				KC_NO,				KC_NO,											KC_NO,				KC_MPRV,			KC_VOLD,			KC_MNXT,			KC_NO,				KC_NO,
+		TO(Gaming),			KC_NO,				KC_NO,				KC_NO,				KC_NO,				KC_NO,											KC_MRWD,			KC_MPRV,			KC_VOLD,			KC_MNXT,			KC_MFFD,			KC_NO,
 		KC_NO,				KC_NO,				KC_NO,				KC_NO,				KC_NO,				KC_NO,			KC_TRNS,		KC_TRNS,		KC_NO,				KC_NO,				KC_NO,				KC_NO,				KC_NO,				KC_NO,
-														KC_TRNS,			KC_TRNS,			KC_TRNS,			KC_TRNS,						KC_TRNS,			KC_TRNS,			KC_TRNS,			KC_TRNS),
+														KC_NO,				KC_NO,				KC_NO,				KC_NO,							KC_NO,				KC_NO,				KC_NO,				KC_NO),
 
  /*
    ╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸
@@ -248,11 +248,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    │ Mouse                                                     │
    └───────────────────────────────────────────────────────────┘
                ╭───────────┬───────────┬───────────┬───────────┬───────────╮                    ╭───────────┬───────────┬───────────┬───────────┬───────────╮
-               │     A     │     Z     │     E     │     R     │     T     │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │     Y     │     U     │     I     │     O     │     P     │
+               │           │           │           │           │           │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │           │ LEFT CLICK│    ⏶︎	    │RIGHT CLICK│   WH UP   │
    ╭───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────╮
-   │    TAB    │     Q     │     S     │     D     │     F     │     G     ├─╯                ╰─┤     H     │     J     │     K     │     L     │     M     │     "     │
+   │           │           │   ACL0    │   ACL1    │   ACL2    │           ├─╯                ╰─┤           │    ⏴︎	    │    ⏷︎	    │    ⏵︎	    │  WH DOWN  │           │
    ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤╭────────╮╭────────╮├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-   │    DEL    │     W     │     X     │     C     │     V     │     B     ││  MUTE  ││PLY/PSE ││     N     │     ,     │     ;     │     :     │      ^^   │   SHIFT   │
+   │           │           │           │           │           │           ││        ││        ││           │  WH LEFT  │ MID CLICK │ WH RIGHT  │           │           │
    ╰───────────┴───────────┴───────────┼───────────┼───────────┼───────────┼╰────────╯╰────────╯┼───────────┼───────────┼───────────┼───────────┴───────────┴───────────╯
                                        │           │           │           │         ││         │           │           │           │
                                        ╰───────────┴───────────┴───────────┴─────────╯╰─────────┴───────────┴───────────┴───────────╯ */
@@ -260,7 +260,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[Mouse] = LAYOUT_polydactyl(
 							KC_NO,				KC_NO,				KC_NO,				KC_NO,				KC_NO,											KC_NO,				KC_BTN1,			KC_MS_U,			KC_BTN2,			KC_WH_U,
 		KC_NO,				KC_NO,				KC_ACL0,			KC_ACL1,			KC_ACL2,			KC_NO,											KC_NO,				KC_MS_L,			KC_MS_D,			KC_MS_R,			KC_WH_D,			KC_NO,
-		KC_NO,				KC_NO,				KC_NO,				KC_NO,				KC_NO,				KC_NO,			KC_TRNS,		KC_TRNS,		KC_NO,				KC_WH_L,			KC_NO,				KC_WH_R,			KC_NO,				KC_NO,
+		KC_NO,				KC_NO,				KC_NO,				KC_NO,				KC_NO,				KC_NO,			KC_TRNS,		KC_TRNS,		KC_NO,				KC_WH_L,			KC_BTN3,			KC_WH_R,			KC_NO,				KC_NO,
 														KC_TRNS,			KC_TRNS,			KC_TRNS,			KC_TRNS,						KC_TRNS,			KC_TRNS,			KC_TRNS,			KC_TRNS),
 
  /*
